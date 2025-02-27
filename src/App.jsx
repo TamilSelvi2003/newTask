@@ -3,10 +3,10 @@ import { useState } from "react";
 const App = () => {
   const items = ["Apple", "Banana", "Cherry", "Grapes", "Mango", "Orange", "Strawberry"];
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search, setSearch] = useState("");
 
   const filteredItems = items.filter((item) =>
-    item.toLowerCase().includes(searchTerm.toLowerCase())
+    item.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -16,7 +16,7 @@ const App = () => {
         type="text"
         placeholder="Search..."
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
         style={{
           padding: "10px",
           width: "300px",
